@@ -1,0 +1,58 @@
+@media print {
+    .no-print { display: none !important; }
+    body { padding: 0; margin: 0; background: white !important; }
+    .print-container { 
+        height: 100vh; 
+        width: 100vw; 
+        padding: 8mm !important;
+        box-shadow: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+    }
+    .page-border { 
+        border-width: 8px !important; 
+        flex-grow: 1 !important;
+        height: 100% !important;
+    }
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.text-mishna {
+    font-size: clamp(1rem, 3.5vh, 2.2rem);
+    line-height: 1.4;
+    font-weight: 800;
+}
+body {
+    background-color: #f1f5f9;
+}
+.print-container {
+    width: 100%;
+    max-width: 210mm;
+    height: auto;
+    aspect-ratio: 210/297;
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .print-container {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .text-mishna {
+        font-size: clamp(0.8rem, 2.5vh, 1.5rem);
+    }
+
+    .page-border {
+        border-width: 4px !important;
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MishnaMaker Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#e7ffc2] dark:bg-slate-900 flex justify-between items-center px-8 py-4 w-full sticky top-0 z-40">
+<div class="text-2xl font-black text-[#1f3400] dark:text-[#e7ffc2] headline-font">
+        MishnaMaker
+    </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#3A86FF] border-b-4 border-[#3A86FF] pb-1 hover:scale-105 transition-transform duration-150" href="#">הגדרות</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#1f3400] dark:text-slate-400 opacity-70 hover:scale-105 hover:opacity-100 transition-transform duration-150" href="#">תצוגה מקדימה</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#3A86FF] p-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+</button>
+<button class="text-[#3A86FF] p-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-12 space-y-12">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 bg-surface-container-low rounded-xl p-12 overflow-hidden relative">
+<div class="flex-1 space-y-6 z-10">
+<h1 class="text-5xl md:text-7xl font-extrabold headline-font text-on-background tracking-tight leading-tight">
+                עצבו את <br/><span class="text-primary">פוסטר המשנה שלכם</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg">
+                התאימו אישית כל כרטיס עם טקסט המשנה האהוב עליכם וצבעים חיים. הפכו חוכמה ליצירת אמנות יפהפייה.
+            </p>
+<button class="bg-gradient-to-br from-primary to-primary-dim text-on-primary font-bold px-10 py-5 rounded-full text-xl shadow-xl hover:scale-105 transition-transform flex items-center gap-3">
+                צפו בפוסטר הסופי
+                <span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</button>
+</div>
+<div class="flex-1 w-full relative">
+<div class="w-full h-80 rounded-xl overflow-hidden shadow-2xl rotate-3 bg-surface-container-highest flex items-center justify-center p-8 border-4 border-outline-variant/20">
+<img alt="vibrant minimalist israeli art poster" class="w-full h-full object-cover rounded-lg shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4MVMKnzUa_2-R2BitT6J3ZnN0xNv2B9pZpo9IyDhDieioNzasZGdQMOEtdrFpFnc8POtwAeFgA66YueEM0obODMYbNAaRcihud2e3ROpksPUACcuJvZjf1keba_kZfkehSMisVUHbYiNghTRompwf78HysoczLMgMDqlS2NoFJDQDq2W_AkGOnQFoOISD4xgc9CiFvH8DbAiygCzMTf1Tva8LmWNBEnJuadGKs8IX9-HlvKimRDnVHEYXhmwKJPC-4WB3_SWq_wKc"/>
+</div>
+<div class="absolute -bottom-6 -left-6 w-48 h-48 rounded-xl overflow-hidden shadow-2xl -rotate-6 border-8 border-white bg-white">
+<img alt="art supplies" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA58BvwMXuAahrin6AOyxqPrJ9I6nR4iuWm7tOZki4Do-03haCcLQgVfJgFKSqMOMbEOUYqln8IpwsRU-4VKFem_k6kp6E5N4Eyogo5o87bZesn-nh_uUpsSnXqx6UiOTIYZgwLaasun2D93-O-TbtbhpH-YkXrKTrfdhKTPPJqF1me3JRn0KFr4RhKket1YwWu_tSJ5WtmH1qlF1w-z10wc8IwcW2HoC_3GOT0rrRHpsrms1ZcgI1EryIjGg1M49B1MCWsqbuaCjni"/>
+</div>
+</div>
+</section>
+<!-- Page Border Style Section -->
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-outline-variant/10">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 space-y-4">
+<h2 class="text-2xl font-bold headline-font text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">border_outer</span>
+                    סגנון מסגרת לדף
+                </h2>
+<p class="text-on-surface-variant">בחרו את המסגרת שתקיף את הפוסטר כולו למראה מושלם.</p>
+<div class="flex flex-wrap gap-4 pt-2">
+<button class="flex flex-col items-center gap-2 p-4 rounded-xl border-4 border-primary bg-primary-container/20 transition-all hover:scale-105">
+<div class="w-16 h-12 border-4 border-primary rounded-sm"></div>
+<span class="font-bold text-sm">קלאסי</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-outline-variant hover:border-primary transition-all hover:scale-105">
+<div class="w-16 h-12 border-4 border-dotted border-secondary rounded-sm"></div>
+<span class="font-bold text-sm text-on-surface-variant">מנוקד</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-outline-variant hover:border-primary transition-all hover:scale-105">
+<div class="w-16 h-12 border-8 border-tertiary rounded-sm"></div>
+<span class="font-bold text-sm text-on-surface-variant">עבה</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-outline-variant hover:border-primary transition-all hover:scale-105">
+<div class="w-16 h-12 border-double border-4 border-on-background rounded-sm"></div>
+<span class="font-bold text-sm text-on-surface-variant">כפול</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/4 space-y-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">צבע מסגרת</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-10 h-10 rounded-full bg-primary border-4 border-white shadow-sm cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-secondary cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-tertiary cursor-pointer"></div>
+<div class="w-10 h-10 rounded-full bg-outline cursor-pointer"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid of Mishnah Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-outline-variant/10 flex flex-col gap-8 transition-all hover:shadow-2xl">
+<div class="mishnah-preview bg-secondary-container border-secondary rounded-xl p-8 min-h-[200px] flex items-center justify-center text-center">
+<textarea class="bg-transparent border-none focus:ring-0 text-3xl font-headline font-bold text-on-secondary-container w-full resize-none text-center h-full" rows="3">הוי מתון בדין, והעמד תלמידים הרבה, ועשו סייג לתורה.</textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">צבע רקע</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-secondary-container border-2 border-secondary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-primary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">מסגרת</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-lg border-4 border-secondary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-primary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-tertiary cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">טקסט</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-on-secondary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-primary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-background cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">גופן</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-bold headline-font py-2">
+<option>קלאסי</option>
+<option>מודרני</option>
+<option>כתב יד</option>
+</select>
+</div><div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">יישור טקסט</label>
+<div class="flex gap-1">
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="ימין"><span class="material-symbols-outlined text-sm">format_align_right</span></button>
+<button class="p-1 rounded bg-primary-container text-primary" title="מרכז"><span class="material-symbols-outlined text-sm">format_align_center</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="שמאל"><span class="material-symbols-outlined text-sm">format_align_left</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="מיושר"><span class="material-symbols-outlined text-sm">format_align_justify</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-outline-variant/10 flex flex-col gap-8 transition-all hover:shadow-2xl translate-y-6">
+<div class="mishnah-preview bg-primary-container border-primary rounded-xl p-8 min-h-[200px] flex items-center justify-center text-center">
+<textarea class="bg-transparent border-none focus:ring-0 text-3xl font-headline font-bold text-on-primary-container w-full resize-none text-center h-full" rows="3">על שלושה דברים העולם עומד: על התורה, ועל העבודה, ועל גמילות חסדים.</textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">צבע רקע</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-primary-container border-2 border-primary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-secondary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">מסגרת</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-lg border-4 border-primary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-secondary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-on-background cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">טקסט</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-on-primary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-secondary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-surface cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">גופן</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-bold headline-font py-2">
+<option>מודרני</option>
+<option>קלאסי</option>
+<option>כתב יד</option>
+</select>
+</div><div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">יישור טקסט</label>
+<div class="flex gap-1">
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="ימין"><span class="material-symbols-outlined text-sm">format_align_right</span></button>
+<button class="p-1 rounded bg-primary-container text-primary" title="מרכז"><span class="material-symbols-outlined text-sm">format_align_center</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="שמאל"><span class="material-symbols-outlined text-sm">format_align_left</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="מיושר"><span class="material-symbols-outlined text-sm">format_align_justify</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-outline-variant/10 flex flex-col gap-8 transition-all hover:shadow-2xl">
+<div class="mishnah-preview bg-tertiary-container border-tertiary rounded-xl p-8 min-h-[200px] flex items-center justify-center text-center">
+<textarea class="bg-transparent border-none focus:ring-0 text-3xl font-headline font-bold text-on-tertiary-container w-full resize-none text-center h-full" rows="3">יהי ביתך פתוח לרווחה, ויהיו עניים בני ביתך.</textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">צבע רקע</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-tertiary-container border-2 border-tertiary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-error-container cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">מסגרת</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-lg border-4 border-tertiary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-outline cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-secondary cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">טקסט</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-on-tertiary-container cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-background cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-primary-dim cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">גופן</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-bold headline-font py-2">
+<option>כתב יד</option>
+<option>קלאסי</option>
+<option>מודרני</option>
+</select>
+</div><div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">יישור טקסט</label>
+<div class="flex gap-1">
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="ימין"><span class="material-symbols-outlined text-sm">format_align_right</span></button>
+<button class="p-1 rounded bg-primary-container text-primary" title="מרכז"><span class="material-symbols-outlined text-sm">format_align_center</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="שמאל"><span class="material-symbols-outlined text-sm">format_align_left</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="מיושר"><span class="material-symbols-outlined text-sm">format_align_justify</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-outline-variant/10 flex flex-col gap-8 transition-all hover:shadow-2xl translate-y-6">
+<div class="mishnah-preview bg-surface-container-high border-outline rounded-xl p-8 min-h-[200px] flex items-center justify-center text-center">
+<textarea class="bg-transparent border-none focus:ring-0 text-3xl font-headline font-bold text-on-surface-variant w-full resize-none text-center h-full" rows="3">אל תהי בז לכל אדם, ואל תהי מפליג לכל דבר.</textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">צבע רקע</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-outline cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">מסגרת</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-lg border-4 border-outline cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-primary cursor-pointer"></div>
+<div class="w-8 h-8 rounded-lg border-4 border-secondary cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">טקסט</label>
+<div class="flex gap-2 flex-wrap">
+<div class="w-8 h-8 rounded-full bg-on-surface-variant cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-primary-fixed cursor-pointer"></div>
+<div class="w-8 h-8 rounded-full bg-on-background cursor-pointer"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">גופן</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-bold headline-font py-2">
+<option>מודרני</option>
+<option>קלאסי</option>
+<option>כתב יד</option>
+</select>
+</div><div class="space-y-2">
+<label class="text-xs font-bold uppercase headline-font text-on-surface-variant">יישור טקסט</label>
+<div class="flex gap-1">
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="ימין"><span class="material-symbols-outlined text-sm">format_align_right</span></button>
+<button class="p-1 rounded bg-primary-container text-primary" title="מרכז"><span class="material-symbols-outlined text-sm">format_align_center</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="שמאל"><span class="material-symbols-outlined text-sm">format_align_left</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" title="מיושר"><span class="material-symbols-outlined text-sm">format_align_justify</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_-20px_40px_rgba(31,52,0,0.08)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center bg-[#b0ff35] text-[#1f3400] rounded-full px-6 py-2 transition-colors font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="edit_square" style="font-variation-settings: 'FILL' 1;">edit_square</span>
+<span>עיצוב</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1f3400] opacity-40 hover:bg-[#d3ff95] transition-colors font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span>פוסטר</span>
+</a>
+</nav>
+<script src="script.js"></script>
+</body></html>
