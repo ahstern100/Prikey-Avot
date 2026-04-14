@@ -1,71 +1,65 @@
-tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            "colors": {
-                "on-tertiary-container": "#543c00",
-                "on-surface-variant": "#416600",
-                "on-primary": "#f0f2ff",
-                "surface-container-high": "#a7fa0d",
-                "on-background": "#1f3400",
-                "tertiary-fixed-dim": "#ebaf00",
-                "tertiary-container": "#fcbc05",
-                "tertiary-dim": "#674b00",
-                "inverse-surface": "#071100",
-                "surface-variant": "#a2f400",
-                "on-primary-fixed": "#000000",
-                "secondary-fixed-dim": "#ffb196",
-                "inverse-primary": "#4c8eff",
-                "primary-fixed-dim": "#5291ff",
-                "surface-bright": "#e7ffc2",
-                "surface-container-highest": "#a2f400",
-                "secondary-container": "#ffc4b1",
-                "error-dim": "#9f0519",
-                "outline": "#558400",
-                "primary-container": "#6d9fff",
-                "tertiary-fixed": "#fcbc05",
-                "primary": "#0058bc",
-                "primary-dim": "#004ca5",
-                "on-secondary-container": "#832800",
-                "on-primary-container": "#00214f",
-                "on-error": "#ffefee",
-                "secondary-fixed": "#ffc4b1",
-                "error-container": "#fb5151",
-                "on-secondary-fixed-variant": "#932e00",
-                "secondary-dim": "#912d00",
-                "secondary": "#a53500",
-                "primary-fixed": "#6d9fff",
-                "on-secondary": "#ffefeb",
-                "on-surface": "#1f3400",
-                "on-primary-fixed-variant": "#002a61",
-                "on-tertiary-fixed": "#3b2900",
-                "on-tertiary": "#fff1dc",
-                "outline-variant": "#80bf19",
-                "on-error-container": "#570008",
-                "surface-tint": "#0058bc",
-                "surface": "#e7ffc2",
-                "on-secondary-fixed": "#631c00",
-                "surface-container-low": "#d3ff95",
-                "on-tertiary-fixed-variant": "#5f4500",
-                "surface-dim": "#9bea00",
-                "tertiary": "#765600",
-                "error": "#b31b25",
-                "surface-container": "#b0ff35",
-                "surface-container-lowest": "#ffffff",
-                "inverse-on-surface": "#72ad00",
-                "background": "#e7ffc2"
-            },
-            "borderRadius": {
-                "DEFAULT": "1rem",
-                "lg": "2rem",
-                "xl": "3rem",
-                "full": "9999px"
-            },
-            "fontFamily": {
-                "headline": ["Plus Jakarta Sans"],
-                "body": ["Be Vietnam Pro"],
-                "label": ["Plus Jakarta Sans"]
-            }
-        },
-    },
-}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Make text areas editable
+  const textareas = document.querySelectorAll('textarea');
+  textareas.forEach(textarea => {
+    textarea.addEventListener('input', () => {
+      autoResize(textarea);
+    });
+    autoResize(textarea);
+  });
+
+  function autoResize(textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+  }
+
+  // Handle color selections
+  const colorPickers = document.querySelectorAll('[data-color]');
+  colorPickers.forEach(picker => {
+    picker.addEventListener('click', () => {
+      const target = picker.dataset.target;
+      const property = picker.dataset.property;
+      const color = picker.dataset.color;
+      const elements = document.querySelectorAll(target);
+      elements.forEach(element => {
+        element.style[property] = color;
+      });
+    });
+  });
+
+  // Handle alignment buttons
+  const alignmentButtons = document.querySelectorAll('[data-align]');
+  alignmentButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.target;
+      const alignment = button.dataset.align;
+      const elements = document.querySelectorAll(target);
+      elements.forEach(element => {
+        element.style.textAlign = alignment;
+      });
+    });
+  });
+
+  // Handle font selection
+  const fontSelectors = document.querySelectorAll('select');
+  fontSelectors.forEach(selector => {
+    selector.addEventListener('change', (event) => {
+      const target = selector.dataset.target;
+      const font = event.target.value;
+      const elements = document.querySelectorAll(target);
+      elements.forEach(element => {
+        element.style.fontFamily = font;
+      });
+    });
+  });
+
+  // "Show Final Poster" button
+  const showPosterButton = document.querySelector('.show-poster-button');
+  if (showPosterButton) {
+    showPosterButton.addEventListener('click', () => {
+      window.location.href = 'print.html';
+    });
+  }
+});
+
