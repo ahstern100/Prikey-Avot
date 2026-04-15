@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף להדפסה</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="grid-container" id="mishnaGrid">
+        </div>
+        <button onclick="window.print()">הדפס</button>
+    </div>
+    <script>
+        window.onload = function() {
+            const mishnaGrid = document.getElementById('mishnaGrid');
+            const mishnayot = JSON.parse(localStorage.getItem('mishnayot'));
+            if (mishnayot) {
+                for (let i = 1; i <= 4; i++) {
+                    const mishnaText = mishnayot['mishna' + i];
+                    if (mishnaText) {
+                        const mishnaDiv = document.createElement('div');
+                        mishnaDiv.classList.add('mishna');
+                        mishnaDiv.innerText = mishnaText;
+                        mishnaGrid.appendChild(mishnaDiv);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
