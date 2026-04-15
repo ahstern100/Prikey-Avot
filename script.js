@@ -1,10 +1,64 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Make text areas editable
+  const settings = {
+    card1: {},
+    card2: {},
+    card3: {},
+    card4: {}
+  };
+
+  function saveSettings() {
+    localStorage.setItem('mishnaSettings', JSON.stringify(settings));
+  }
+
+  function loadSettings() {
+    const savedSettings = JSON.parse(localStorage.getItem('mishnaSettings'));
+    if (savedSettings) {
+      Object.assign(settings, savedSettings);
+      applySettings();
+    }
+  }
+
+  function applySettings() {
+    for (const cardId in settings) {
+      const cardSettings = settings[cardId];
+      const cardElement = document.getElementById(cardId);
+
+      if (cardElement) {
+        const mishnahPreview = cardElement.querySelector('.mishnah-preview');
+        const textarea = cardElement.querySelector('textarea');
+
+        if (cardSettings.text) {
+          textarea.value = cardSettings.text;
+          autoResize(textarea);
+        }
+        if (cardSettings.backgroundColor) {
+          mishnahPreview.style.backgroundColor = cardSettings.backgroundColor;
+        }
+        if (cardSettings.borderColor) {
+          mishnahPreview.style.borderColor = cardSettings.borderColor;
+        }
+        if (cardSettings.color) {
+          textarea.style.color = cardSettings.color;
+        }
+        if (cardSettings.fontFamily) {
+          textarea.style.fontFamily = cardSettings.fontFamily;
+        }
+        if (cardSettings.textAlign) {
+          textarea.style.textAlign = cardSettings.textAlign;
+        }
+      }
+    }
+  }
+
+  // Make text areas editable and save content
   const textareas = document.querySelectorAll('textarea');
   textareas.forEach(textarea => {
     textarea.addEventListener('input', () => {
       autoResize(textarea);
+      const cardId = textarea.closest('.flex.flex-col.gap-8').id;
+      settings[cardId].text = textarea.value;
+      saveSettings();
     });
     autoResize(textarea);
   });
@@ -25,6 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
       elements.forEach(element => {
         element.style[property] = color;
       });
+
+      const cardId = picker.closest('.flex.flex-col.gap-8').id;
+      settings[cardId][property] = color;
+      saveSettings();
     });
   });
 
@@ -38,6 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
       elements.forEach(element => {
         element.style.textAlign = alignment;
       });
+
+      const cardId = button.closest('.flex.flex-col.gap-8').id;
+      settings[cardId].textAlign = alignment;
+      saveSettings();
     });
   });
 
@@ -51,6 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
       elements.forEach(element => {
         element.style.fontFamily = font;
       });
+
+      const cardId = selector.closest('.flex.flex-col.gap-8').id;
+      settings[cardId].fontFamily = font;
+      saveSettings();
     });
   });
 
@@ -61,5 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'print.html';
     });
   }
-});
 
+  loadSettings();
+});
