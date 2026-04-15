@@ -14,8 +14,15 @@
     </div>
     <script>
         window.onload = function() {
+            const printSettings = JSON.parse(localStorage.getItem('printSettings'));
+            if (printSettings && printSettings.border) {
+                document.documentElement.style.setProperty('--print-border', printSettings.border);
+            }
+
             const mishnaGrid = document.getElementById('mishnaGrid');
             const mishnayot = JSON.parse(localStorage.getItem('mishnayot'));
+            const mishnaStyles = JSON.parse(localStorage.getItem('mishnaStyles'));
+
             if (mishnayot) {
                 for (let i = 1; i <= 4; i++) {
                     const mishnaText = mishnayot['mishna' + i];
@@ -23,6 +30,16 @@
                         const mishnaDiv = document.createElement('div');
                         mishnaDiv.classList.add('mishna');
                         mishnaDiv.innerText = mishnaText;
+
+                        if (mishnaStyles && mishnaStyles['mishna' + i]) {
+                            const style = mishnaStyles['mishna' + i];
+                            mishnaDiv.style.backgroundColor = style.backgroundColor;
+                            mishnaDiv.style.borderColor = style.borderColor;
+                            mishnaDiv.style.color = style.color;
+                            mishnaDiv.style.fontFamily = style.fontFamily;
+                            mishnaDiv.style.fontSize = style.fontSize;
+                        }
+
                         mishnaGrid.appendChild(mishnaDiv);
                     }
                 }

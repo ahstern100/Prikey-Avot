@@ -10,21 +10,135 @@
     <div class="container">
         <h1>הגדרת 4 משניות מפרקי אבות</h1>
         <form id="mishnaForm">
+            <div class="mishna-settings">
+                <h2>משנה 1</h2>
+                <div class="form-group">
+                    <label for="mishna1">משנה 1:</label>
+                    <textarea id="mishna1" name="mishna1" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mishna1_bgColor">צבע רקע:</label>
+                    <input type="color" id="mishna1_bgColor" name="mishna1_bgColor" value="#ffffff">
+                </div>
+                <div class="form-group">
+                    <label for="mishna1_borderColor">צבע מסגרת:</label>
+                    <input type="color" id="mishna1_borderColor" name="mishna1_borderColor" value="#cccccc">
+                </div>
+                <div class="form-group">
+                    <label for="mishna1_textColor">צבע טקסט:</label>
+                    <input type="color" id="mishna1_textColor" name="mishna1_textColor" value="#333333">
+                </div>
+                <div class="form-group">
+                    <label for="mishna1_fontFamily">גופן:</label>
+                    <input type="text" id="mishna1_fontFamily" name="mishna1_fontFamily" value="Arial">
+                </div>
+                <div class="form-group">
+                    <label for="mishna1_fontSize">גודל גופן (בפיקסלים):</label>
+                    <input type="number" id="mishna1_fontSize" name="mishna1_fontSize" value="16">
+                </div>
+            </div>
+
+            <div class="mishna-settings">
+                <h2>משנה 2</h2>
+                <div class="form-group">
+                    <label for="mishna2">משנה 2:</label>
+                    <textarea id="mishna2" name="mishna2" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mishna2_bgColor">צבע רקע:</label>
+                    <input type="color" id="mishna2_bgColor" name="mishna2_bgColor" value="#ffffff">
+                </div>
+                <div class="form-group">
+                    <label for="mishna2_borderColor">צבע מסגרת:</label>
+                    <input type="color" id="mishna2_borderColor" name="mishna2_borderColor" value="#cccccc">
+                </div>
+                <div class="form-group">
+                    <label for="mishna2_textColor">צבע טקסט:</label>
+                    <input type="color" id="mishna2_textColor" name="mishna2_textColor" value="#333333">
+                </div>
+                <div class="form-group">
+                    <label for="mishna2_fontFamily">גופן:</label>
+                    <input type="text" id="mishna2_fontFamily" name="mishna2_fontFamily" value="Arial">
+                </div>
+                <div class="form-group">
+                    <label for="mishna2_fontSize">גודל גופן (בפיקסלים):</label>
+                    <input type="number" id="mishna2_fontSize" name="mishna2_fontSize" value="16">
+                </div>
+            </div>
+
+            <div class="mishna-settings">
+                <h2>משנה 3</h2>
+                <div class="form-group">
+                    <label for="mishna3">משנה 3:</label>
+                    <textarea id="mishna3" name="mishna3" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mishna3_bgColor">צבע רקע:</label>
+                    <input type="color" id="mishna3_bgColor" name="mishna3_bgColor" value="#ffffff">
+                </div>
+                <div class="form-group">
+                    <label for="mishna3_borderColor">צבע מסגרת:</label>
+                    <input type="color" id="mishna3_borderColor" name="mishna3_borderColor" value="#cccccc">
+                </div>
+                <div class="form-group">
+                    <label for="mishna3_textColor">צבע טקסט:</label>
+                    <input type="color" id="mishna3_textColor" name="mishna3_textColor" value="#333333">
+                </div>
+                <div class="form-group">
+                    <label for="mishna3_fontFamily">גופן:</label>
+                    <input type="text" id="mishna3_fontFamily" name="mishna3_fontFamily" value="Arial">
+                </div>
+                <div class="form-group">
+                    <label for="mishna3_fontSize">גודל גופן (בפיקסלים):</label>
+                    <input type="number" id="mishna3_fontSize" name="mishna3_fontSize" value="16">
+                </div>
+            </div>
+
+            <div class="mishna-settings">
+                <h2>משנה 4</h2>
+                <div class="form-group">
+                    <label for="mishna4">משנה 4:</label>
+                    <textarea id="mishna4" name="mishna4" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mishna4_bgColor">צבע רקע:</label>
+                    <input type="color" id="mishna4_bgColor" name="mishna4_bgColor" value="#ffffff">
+                </div>
+                <div class="form-group">
+                    <label for="mishna4_borderColor">צבע מסגרת:</label>
+                    <input type="color" id="mishna4_borderColor" name="mishna4_borderColor" value="#cccccc">
+                </div>
+                <div class="form-group">
+                    <label for="mishna4_textColor">צבע טקסט:</label>
+                    <input type="color" id="mishna4_textColor" name="mishna4_textColor" value="#333333">
+                </div>
+                <div class="form-group">
+                    <label for="mishna4_fontFamily">גופן:</label>
+                    <input type="text" id="mishna4_fontFamily" name="mishna4_fontFamily" value="Arial">
+                </div>
+                <div class="form-group">
+                    <label for="mishna4_fontSize">גודל גופן (בפיקסלים):</label>
+                    <input type="number" id="mishna4_fontSize" name="mishna4_fontSize" value="16">
+                </div>
+            </div>
+            
+            <h2>הגדרות הדפסה</h2>
             <div class="form-group">
-                <label for="mishna1">משנה 1:</label>
-                <textarea id="mishna1" name="mishna1" rows="6" required></textarea>
+                <label for="borderStyle">סגנון מסגרת:</label>
+                <select id="borderStyle" name="borderStyle">
+                    <option value="solid">רגיל</option>
+                    <option value="dashed">מקווקו</option>
+                    <option value="dotted">מנוקד</option>
+                    <option value="none">ללא</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="mishna2">משנה 2:</label>
-                <textarea id="mishna2" name="mishna2" rows="6" required></textarea>
+                <label for="borderWidth">עובי מסגרת (בפיקסלים):</label>
+                <input type="number" id="borderWidth" name="borderWidth" value="1" min="0">
             </div>
             <div class="form-group">
-                <label for="mishna3">משנה 3:</label>
-                <textarea id="mishna3" name="mishna3" rows="6" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="mishna4">משנה 4:</label>
-                <textarea id="mishna4" name="mishna4" rows="6" required></textarea>
+                <label for="borderColor">צבע מסגרת:</label>
+                <input type="color" id="borderColor" name="borderColor" value="#000000">
             </div>
             <button type="submit">הצג דף להדפסה</button>
         </form>
