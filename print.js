@@ -1,58 +1,30 @@
-tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            "colors": {
-                "primary": "#0058bc",
-                "secondary": "#a53500",
-                "tertiary": "#765600",
-                "outline": "#558400",
-                "surface-container": "#f8fafc"
-            },
-            "borderRadius": {
-                "DEFAULT": "1rem",
-                "lg": "2rem",
-                "xl": "3rem",
-                "full": "9999px"
-            },
-            "fontFamily": {
-                "headline": ["Heebo", "sans-serif"],
-                "body": ["Assistant", "sans-serif"]
-            }
-        },
-    },
-};
-
 document.addEventListener('DOMContentLoaded', () => {
-  const savedSettings = JSON.parse(localStorage.getItem('mishnaSettings'));
+    // Load settings from localStorage
+    const savedSettings = localStorage.getItem('mishnaSettings');
 
-  if (savedSettings) {
-    for (const cardId in savedSettings) {
-      const cardSettings = savedSettings[cardId];
-      const cardElement = document.getElementById(cardId);
+    if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
 
-      if (cardElement) {
-        const paragraph = cardElement.querySelector('p');
+        // Loop through each card (card1, card2, etc.)
+        for (const cardId in settings) {
+            const cardElement = document.getElementById(cardId);
+            const textElement = cardElement ? cardElement.querySelector('p') : null;
 
-        if (cardSettings.text) {
-          paragraph.textContent = cardSettings.text;
+            if (cardElement && textElement) {
+                const cardSettings = settings[cardId];
+
+                // Apply styles to the card and text elements
+                cardElement.style.backgroundColor = cardSettings.backgroundColor || '';
+                cardElement.style.borderColor = cardSettings.borderColor || '';
+                textElement.textContent = cardSettings.text || '';
+                textElement.style.color = cardSettings.color || '';
+                textElement.style.fontFamily = cardSettings.fontFamily || '';
+                textElement.style.textAlign = cardSettings.textAlign || 'center';
+                textElement.style.fontSize = cardSettings.fontSize || '1.5rem'; // Default size if not set
+            }
         }
-        if (cardSettings.backgroundColor) {
-          cardElement.style.backgroundColor = cardSettings.backgroundColor;
-        }
-        if (cardSettings.borderColor) {
-          cardElement.style.borderColor = cardSettings.borderColor;
-        }
-        if (cardSettings.color) {
-          paragraph.style.color = cardSettings.color;
-        }
-        if (cardSettings.fontFamily) {
-          paragraph.style.fontFamily = cardSettings.fontFamily;
-        }
-        if (cardSettings.textAlign) {
-          paragraph.style.textAlign = cardSettings.textAlign;
-        }
-      }
+    } else {
+        // Optional: You can log a message if no settings are found
+        console.log("No saved settings found. Displaying default poster.");
     }
-  }
 });
