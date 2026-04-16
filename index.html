@@ -7,171 +7,211 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Heebo&family=Assistant&family=Suez+One&family=David+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Heebo&family=Assistant&family=Suez+One&family=David+Libre&family=Noto+Sans+Hebrew&family=Rubik&family=Alef&family=Miriam+Libre&family=Bellefair&family=Gveret+Levin&family=Shrikhand&family=Tinos&family=Arimo&family=Cousine&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>הגדרת 4 משניות מפרקי אבות</h1>
         <form id="mishnaForm" class="settings-form">
-            <div class="mishna-settings">
-                <h2>משנה 1</h2>
+            <table class="mishna-table">
+                <!-- Mishna 1 -->
+                <tr>
+                    <td class="settings-cell">
+                        <h2>משנה 1</h2>
+                        <div class="form-group">
+                            <label for="mishna1_borderColor">צבע מסגרת:</label>
+                            <input type="color" id="mishna1_borderColor" name="mishna1_borderColor" value="#cccccc">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna1_bgColor">צבע רקע:</label>
+                            <input type="color" id="mishna1_bgColor" name="mishna1_bgColor" value="#ffffff">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna1_textColor">צבע טקסט:</label>
+                            <input type="color" id="mishna1_textColor" name="mishna1_textColor" value="#333333">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna1_fontFamily">גופן:</label>
+                            <select id="mishna1_fontFamily" name="mishna1_fontFamily">
+                                <option value="Arial">Arial</option>
+                                <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
+                                <option value="Heebo">Heebo</option>
+                                <option value="Assistant">Assistant</option>
+                                <option value="Suez One">Suez One</option>
+                                <option value="David Libre">David Libre</option>
+                                <option value="Noto Sans Hebrew">Noto Sans Hebrew</option>
+                                <option value="Rubik">Rubik</option>
+                                <option value="Alef">Alef</option>
+                                <option value="Miriam Libre">Miriam Libre</option>
+                                <option value="Bellefair">Bellefair</option>
+                                <option value="Gveret Levin">Gveret Levin</option>
+                                <option value="Shrikhand">Shrikhand</option>
+                                <option value="Tinos">Tinos</option>
+                                <option value="Arimo">Arimo</option>
+                                <option value="Cousine">Cousine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna1_fontSize">גודל גופן (בפיקסלים):</label>
+                            <input type="number" id="mishna1_fontSize" name="mishna1_fontSize" value="16">
+                        </div>
+                    </td>
+                    <td class="textarea-cell">
+                        <textarea id="mishna1" name="mishna1" rows="10" placeholder="הכנס את המשנה הראשונה כאן" required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Mishna 2 -->
+                <tr>
+                    <td class="settings-cell">
+                        <h2>משנה 2</h2>
+                        <div class="form-group">
+                            <label for="mishna2_borderColor">צבע מסגרת:</label>
+                            <input type="color" id="mishna2_borderColor" name="mishna2_borderColor" value="#cccccc">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna2_bgColor">צבע רקע:</label>
+                            <input type="color" id="mishna2_bgColor" name="mishna2_bgColor" value="#ffffff">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna2_textColor">צבע טקסט:</label>
+                            <input type="color" id="mishna2_textColor" name="mishna2_textColor" value="#333333">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna2_fontFamily">גופן:</label>
+                            <select id="mishna2_fontFamily" name="mishna2_fontFamily">
+                                <option value="Arial">Arial</option>
+                                <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
+                                <option value="Heebo">Heebo</option>
+                                <option value="Assistant">Assistant</option>
+                                <option value="Suez One">Suez One</option>
+                                <option value="David Libre">David Libre</option>
+                                <option value="Noto Sans Hebrew">Noto Sans Hebrew</option>
+                                <option value="Rubik">Rubik</option>
+                                <option value="Alef">Alef</option>
+                                <option value="Miriam Libre">Miriam Libre</option>
+                                <option value="Bellefair">Bellefair</option>
+                                <option value="Gveret Levin">Gveret Levin</option>
+                                <option value="Shrikhand">Shrikhand</option>
+                                <option value="Tinos">Tinos</option>
+                                <option value="Arimo">Arimo</option>
+                                <option value="Cousine">Cousine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna2_fontSize">גודל גופן (בפיקסלים):</label>
+                            <input type="number" id="mishna2_fontSize" name="mishna2_fontSize" value="16">
+                        </div>
+                    </td>
+                    <td class="textarea-cell">
+                        <textarea id="mishna2" name="mishna2" rows="10" placeholder="הכנס את המשנה השניה כאן" required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Mishna 3 -->
+                <tr>
+                    <td class="settings-cell">
+                        <h2>משנה 3</h2>
+                        <div class="form-group">
+                            <label for="mishna3_borderColor">צבע מסגרת:</label>
+                            <input type="color" id="mishna3_borderColor" name="mishna3_borderColor" value="#cccccc">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna3_bgColor">צבע רקע:</label>
+                            <input type="color" id="mishna3_bgColor" name="mishna3_bgColor" value="#ffffff">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna3_textColor">צבע טקסט:</label>
+                            <input type="color" id="mishna3_textColor" name="mishna3_textColor" value="#333333">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna3_fontFamily">גופן:</label>
+                            <select id="mishna3_fontFamily" name="mishna3_fontFamily">
+                                <option value="Arial">Arial</option>
+                                <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
+                                <option value="Heebo">Heebo</option>
+                                <option value="Assistant">Assistant</option>
+                                <option value="Suez One">Suez One</option>
+                                <option value="David Libre">David Libre</option>
+                                <option value="Noto Sans Hebrew">Noto Sans Hebrew</option>
+                                <option value="Rubik">Rubik</option>
+                                <option value="Alef">Alef</option>
+                                <option value="Miriam Libre">Miriam Libre</option>
+                                <option value="Bellefair">Bellefair</option>
+                                <option value="Gveret Levin">Gveret Levin</option>
+                                <option value="Shrikhand">Shrikhand</option>
+                                <option value="Tinos">Tinos</option>
+                                <option value="Arimo">Arimo</option>
+                                <option value="Cousine">Cousine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna3_fontSize">גודל גופן (בפיקסלים):</label>
+                            <input type="number" id="mishna3_fontSize" name="mishna3_fontSize" value="16">
+                        </div>
+                    </td>
+                    <td class="textarea-cell">
+                        <textarea id="mishna3" name="mishna3" rows="10" placeholder="הכנס את המשנה השלישית כאן" required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Mishna 4 -->
+                <tr>
+                    <td class="settings-cell">
+                        <h2>משנה 4</h2>
+                        <div class="form-group">
+                            <label for="mishna4_borderColor">צבע מסגרת:</label>
+                            <input type="color" id="mishna4_borderColor" name="mishna4_borderColor" value="#cccccc">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna4_bgColor">צבע רקע:</label>
+                            <input type="color" id="mishna4_bgColor" name="mishna4_bgColor" value="#ffffff">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna4_textColor">צבע טקסט:</label>
+                            <input type="color" id="mishna4_textColor" name="mishna4_textColor" value="#333333">
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna4_fontFamily">גופן:</label>
+                            <select id="mishna4_fontFamily" name="mishna4_fontFamily">
+                                <option value="Arial">Arial</option>
+                                <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
+                                <option value="Heebo">Heebo</option>
+                                <option value="Assistant">Assistant</option>
+                                <option value="Suez One">Suez One</option>
+                                <option value="David Libre">David Libre</option>
+                                <option value="Noto Sans Hebrew">Noto Sans Hebrew</option>
+                                <option value="Rubik">Rubik</option>
+                                <option value="Alef">Alef</option>
+                                <option value="Miriam Libre">Miriam Libre</option>
+                                <option value="Bellefair">Bellefair</option>
+                                <option value="Gveret Levin">Gveret Levin</option>
+                                <option value="Shrikhand">Shrikhand</option>
+                                <option value="Tinos">Tinos</option>
+                                <option value="Arimo">Arimo</option>
+                                <option value="Cousine">Cousine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mishna4_fontSize">גודל גופן (בפיקסלים):</label>
+                            <input type="number" id="mishna4_fontSize" name="mishna4_fontSize" value="16">
+                        </div>
+                    </td>
+                    <td class="textarea-cell">
+                        <textarea id="mishna4" name="mishna4" rows="10" placeholder="הכנס את המשנה הרביעית כאן" required></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="page-settings">
+                <h2>הגדרות הדפסה</h2>
                 <div class="form-group">
-                    <label for="mishna1">משנה 1:</label>
-                    <textarea id="mishna1" name="mishna1" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="mishna1_bgColor">צבע רקע:</label>
-                    <input type="color" id="mishna1_bgColor" name="mishna1_bgColor" value="#ffffff">
-                </div>
-                <div class="form-group">
-                    <label for="mishna1_borderColor">צבע מסגרת:</label>
-                    <input type="color" id="mishna1_borderColor" name="mishna1_borderColor" value="#cccccc">
-                </div>
-                <div class="form-group">
-                    <label for="mishna1_textColor">צבע טקסט:</label>
-                    <input type="color" id="mishna1_textColor" name="mishna1_textColor" value="#333333">
-                </div>
-                <div class="form-group">
-                    <label for="mishna1_fontFamily">גופן:</label>
-                    <select id="mishna1_fontFamily" name="mishna1_fontFamily">
-                        <option value="Arial">Arial</option>
-                        <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
-                        <option value="Heebo">Heebo</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Suez One">Suez One</option>
-                        <option value="David Libre">David Libre</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mishna1_fontSize">גודל גופן (בפיקסלים):</label>
-                    <input type="number" id="mishna1_fontSize" name="mishna1_fontSize" value="16">
+                    <label for="page_bgColor">צבע רקע הדף:</label>
+                    <input type="color" id="page_bgColor" name="page_bgColor" value="#ffffff">
                 </div>
             </div>
 
-            <div class="mishna-settings">
-                <h2>משנה 2</h2>
-                <div class="form-group">
-                    <label for="mishna2">משנה 2:</label>
-                    <textarea id="mishna2" name="mishna2" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="mishna2_bgColor">צבע רקע:</label>
-                    <input type="color" id="mishna2_bgColor" name="mishna2_bgColor" value="#ffffff">
-                </div>
-                <div class="form-group">
-                    <label for="mishna2_borderColor">צבע מסגרת:</label>
-                    <input type="color" id="mishna2_borderColor" name="mishna2_borderColor" value="#cccccc">
-                </div>
-                <div class="form-group">
-                    <label for="mishna2_textColor">צבע טקסט:</label>
-                    <input type="color" id="mishna2_textColor" name="mishna2_textColor" value="#333333">
-                </div>
-                <div class="form-group">
-                    <label for="mishna2_fontFamily">גופן:</label>
-                    <select id="mishna2_fontFamily" name="mishna2_fontFamily">
-                        <option value="Arial">Arial</option>
-                        <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
-                        <option value="Heebo">Heebo</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Suez One">Suez One</option>
-                        <option value="David Libre">David Libre</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mishna2_fontSize">גודל גופן (בפיקסלים):</label>
-                    <input type="number" id="mishna2_fontSize" name="mishna2_fontSize" value="16">
-                </div>
-            </div>
-
-            <div class="mishna-settings">
-                <h2>משנה 3</h2>
-                <div class="form-group">
-                    <label for="mishna3">משנה 3:</label>
-                    <textarea id="mishna3" name="mishna3" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="mishna3_bgColor">צבע רקע:</label>
-                    <input type="color" id="mishna3_bgColor" name="mishna3_bgColor" value="#ffffff">
-                </div>
-                <div class="form-group">
-                    <label for="mishna3_borderColor">צבע מסגרת:</label>
-                    <input type="color" id="mishna3_borderColor" name="mishna3_borderColor" value="#cccccc">
-                </div>
-                <div class="form-group">
-                    <label for="mishna3_textColor">צבע טקסט:</label>
-                    <input type="color" id="mishna3_textColor" name="mishna3_textColor" value="#333333">
-                </div>
-                <div class="form-group">
-                    <label for="mishna3_fontFamily">גופן:</label>
-                    <select id="mishna3_fontFamily" name="mishna3_fontFamily">
-                        <option value="Arial">Arial</option>
-                        <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
-                        <option value="Heebo">Heebo</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Suez One">Suez One</option>
-                        <option value="David Libre">David Libre</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mishna3_fontSize">גודל גופן (בפיקסלים):</label>
-                    <input type="number" id="mishna3_fontSize" name="mishna3_fontSize" value="16">
-                </div>
-            </div>
-
-            <div class="mishna-settings">
-                <h2>משנה 4</h2>
-                <div class="form-group">
-                    <label for="mishna4">משנה 4:</label>
-                    <textarea id="mishna4" name="mishna4" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="mishna4_bgColor">צבע רקע:</label>
-                    <input type="color" id="mishna4_bgColor" name="mishna4_bgColor" value="#ffffff">
-                </div>
-                <div class="form-group">
-                    <label for="mishna4_borderColor">צבע מסגרת:</label>
-                    <input type="color" id="mishna4_borderColor" name="mishna4_borderColor" value="#cccccc">
-                </div>
-                <div class="form-group">
-                    <label for="mishna4_textColor">צבע טקסט:</label>
-                    <input type="color" id="mishna4_textColor" name="mishna4_textColor" value="#333333">
-                </div>
-                <div class="form-group">
-                    <label for="mishna4_fontFamily">גופן:</label>
-                    <select id="mishna4_fontFamily" name="mishna4_fontFamily">
-                        <option value="Arial">Arial</option>
-                        <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
-                        <option value="Heebo">Heebo</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Suez One">Suez One</option>
-                        <option value="David Libre">David Libre</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mishna4_fontSize">גודל גופן (בפיקסלים):</label>
-                    <input type="number" id="mishna4_fontSize" name="mishna4_fontSize" value="16">
-                </div>
-            </div>
-            
-            <h2>הגדרות הדפסה</h2>
-            <div class="form-group">
-                <label for="borderStyle">סגנון מסגרת:</label>
-                <select id="borderStyle" name="borderStyle">
-                    <option value="solid">רגיל</option>
-                    <option value="dashed">מקווקו</option>
-                    <option value="dotted">מנוקד</option>
-                    <option value="none">ללא</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="borderWidth">עובי מסגרת (בפיקסלים):</label>
-                <input type="number" id="borderWidth" name="borderWidth" value="1" min="0">
-            </div>
-            <div class="form-group">
-                <label for="borderColor">צבע מסגרת:</label>
-                <input type="color" id="borderColor" name="borderColor" value="#000000">
-            </div>
-            <button type="submit">הצג דף להדפסה</button>
+            <button type="submit" class="submit-btn">צור דף להדפסה</button>
         </form>
     </div>
     <script src="script.js"></script>
